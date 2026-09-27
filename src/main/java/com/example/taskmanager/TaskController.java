@@ -20,11 +20,6 @@ public class TaskController {
         return taskRepository.findAll();
     }
 
-    @GetMapping("/api/health")
-    public String healthCheck() {
-        return "Task Manager API is running!";
-    }
-
     // GET /api/tasks/{id} - get one task
     @GetMapping("/{id}")
     public ResponseEntity<Task> getTaskById(@PathVariable Long id) {
